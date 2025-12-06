@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -19,5 +20,13 @@ public class Player : MonoBehaviour
     {
         Vector3 movement = new Vector3(direction.x, direction.y, 0f);
         transform.Translate(movement * speed * Time.deltaTime);
+    }
+
+    public void ReadActionInput(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Debug.Log("Action performed!");
+        }
     }
 }
