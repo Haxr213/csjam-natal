@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: d6fd54982a0c44c919cb1302a710c5aa
+guid: c478bc8699d9145708dd247a0baae201
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3956641653606069939
-    second: quadradoselect_0
+      213: 1540143175932213375
+    second: quadradoselectVermelho_0
   - first:
-      213: 8532358731113269180
-    second: quadradoselect_1
+      213: 7739838675588472003
+    second: quadradoselectVermelho_1
   - first:
-      213: 8408276334441089116
-    second: quadradoselect_2
+      213: 4990124441014893474
+    second: quadradoselectVermelho_2
   - first:
-      213: -1918339544774264781
-    second: quadradoselect_3
+      213: -4428472001803281418
+    second: quadradoselectVermelho_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,7 +109,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: quadradoselect_0
+      name: quadradoselectVermelho_0
       rect:
         serializedVersion: 2
         x: 0
@@ -117,21 +117,21 @@ TextureImporter:
         width: 9
         height: 9
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d49cb45116f2719c0800000000000000
-      internalID: -3956641653606069939
+      spriteID: f787ea8fe00bf5510800000000000000
+      internalID: 1540143175932213375
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: quadradoselect_1
+      name: quadradoselectVermelho_1
       rect:
         serializedVersion: 2
         x: 23
@@ -139,21 +139,21 @@ TextureImporter:
         width: 9
         height: 9
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cb785304f07096670800000000000000
-      internalID: 8532358731113269180
+      spriteID: 3ccd74d944e696b60800000000000000
+      internalID: 7739838675588472003
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: quadradoselect_2
+      name: quadradoselectVermelho_2
       rect:
         serializedVersion: 2
         x: 0
@@ -161,21 +161,21 @@ TextureImporter:
         width: 10
         height: 9
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c584fa7f6c230b470800000000000000
-      internalID: 8408276334441089116
+      spriteID: 2abffa38dbb704540800000000000000
+      internalID: 4990124441014893474
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: quadradoselect_3
+      name: quadradoselectVermelho_3
       rect:
         serializedVersion: 2
         x: 22
@@ -183,15 +183,15 @@ TextureImporter:
         width: 10
         height: 10
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 338352b0950b065e0800000000000000
-      internalID: -1918339544774264781
+      spriteID: 6fb90ca6d28ea82c0800000000000000
+      internalID: -4428472001803281418
       vertices: []
       indices: 
       edges: []
@@ -201,7 +201,7 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -210,10 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      quadradoselect_0: -3956641653606069939
-      quadradoselect_1: 8532358731113269180
-      quadradoselect_2: 8408276334441089116
-      quadradoselect_3: -1918339544774264781
+      quadradoselectVermelho_0: 1540143175932213375
+      quadradoselectVermelho_1: 7739838675588472003
+      quadradoselectVermelho_2: 4990124441014893474
+      quadradoselectVermelho_3: -4428472001803281418
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

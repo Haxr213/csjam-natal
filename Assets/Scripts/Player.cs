@@ -4,22 +4,46 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
+    [Header("References")]
+    [SerializeField] private LayerMask slotLayer;
+    [SerializeField] private Transform highlight;
+
+    [Header("Attributes")]
     [SerializeField] private float speed = 5f;
-    [SerializeField] private Vector2 moveInput;
-    //[SerializeField] private Vector2 lastMoveInput;
+    [SerializeField] private float tileSize = 1f;
+    private Vector2 moveInput;
     private Rigidbody2D rb;
     private Animator animator;
+    private Vector2 lookDirection = Vector2.down;
+    private int tileLayer;
+    private int tileUnderPlayer;
+    private readonly string nameTileLayer = "Tile";
+    private readonly string nameTileUnderPlayer = "TileUnderPlayer";
 
-    void Start()
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        highlight.gameObject.SetActive(false);
+        tileLayer = LayerMask.NameToLayer(nameTileLayer);
+        tileUnderPlayer = LayerMask.NameToLayer(nameTileUnderPlayer);
     }
 
-    void Update()
+    private void Update()
     {
         Move();
         SetAnimationWalking();
+        UpdateSelection();
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        setTileUnderPlayerLayer(other);
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        setTileLayer(other);
     }
 
     public void ReadMoveInput(InputAction.CallbackContext context)
@@ -50,6 +74,7 @@ public class Player : MonoBehaviour
         bool isWalking = moveInput.magnitude > 0;
         if (isWalking)
         {
+            lookDirection = moveInput;
             animator.SetBool("IsWalking", true);
             animator.SetFloat("InputX", moveInput.x);
             animator.SetFloat("InputY", moveInput.y);
@@ -58,9 +83,45 @@ public class Player : MonoBehaviour
 
     private void SetAnimationIdle()
     {
-        //lastMoveInput = moveInput;
+        lookDirection = moveInput;
         animator.SetBool("IsWalking", false);
-        animator.SetFloat("LastInputX", moveInput.x);
-        animator.SetFloat("LastInputY", moveInput.y);
+        animator.SetFloat("LastInputX", lookDirection.x);
+        animator.SetFloat("LastInputY", lookDirection.y);
+    }
+
+    private void UpdateSelection()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(
+            transform.position,
+            lookDirection,
+            tileSize,
+            slotLayer
+        );
+
+        if (hit.collider != null)
+        {
+            highlight.gameObject.SetActive(true);
+            highlight.position = hit.collider.transform.position;
+        }
+        else
+        {
+            highlight.gameObject.SetActive(false);
+        }
+    }
+
+    private void setTileLayer(Collider2D collider)
+    {
+        setLayerCollider(collider, tileLayer);
+    }
+
+    private void setTileUnderPlayerLayer(Collider2D collider)
+    {
+        setLayerCollider(collider, tileUnderPlayer);
+    }
+
+    private void setLayerCollider(Collider2D collider, int layer)
+    {
+        if (collider.CompareTag(nameTileLayer))
+            collider.gameObject.layer = layer;
     }
 }

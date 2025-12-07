@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Tile
   layers:
   - Default
   - TransparentFX
@@ -14,7 +15,7 @@ TagManager:
   - Player
   - Enemy
   - Tile
-  - 
+  - TileUnderPlayer
   - 
   - 
   - 
@@ -46,6 +47,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 3525619901
+    locked: 0
+  - name: Selection
+    uniqueID: 1137613225
     locked: 0
   m_RenderingLayers:
   - Default
