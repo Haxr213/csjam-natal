@@ -28,8 +28,6 @@ public class Turret : MonoBehaviour
     private void FindTarget()
     {
         RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, targetingRange, (Vector2) transform.position, 0f, targetLayerMask);
-        Debug.Log("Hits found: " + hits.Length);
-        Debug.Log("TargetLayerMask: " + targetLayerMask.value);
 
         if(hits.Length > 0)
         {
@@ -44,7 +42,6 @@ public class Turret : MonoBehaviour
         Quaternion targetRotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
         turretRotationPoint.rotation = targetRotation; 
 
-        //Debug.Log("Target rotation:" + targetRotation);
     }
 
     private void OnDrawGizmosSelected()
