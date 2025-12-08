@@ -67,5 +67,8 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "HelloWorld.slnx"
+    "dotnet.defaultSolution": "HelloWorld.slnx",
+    "cSpell.words": [
+        "Boundry"
+    ]
 }
