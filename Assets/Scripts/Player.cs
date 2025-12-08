@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     [Header("References")]
     [SerializeField] private LayerMask slotLayer;
     [SerializeField] private Transform highlight;
+    [SerializeField] private GameObject[] turrets;
 
     [Header("Attributes")]
     [SerializeField] private float speed = 5f;
@@ -14,7 +15,7 @@ public class Player : MonoBehaviour
     private Vector2 moveInput;
     private Rigidbody2D rb;
     private Animator animator;
-    private Vector2 lookDirection = Vector2.down;
+    [SerializeField] private Vector2 lookDirection = Vector2.down;
     private int tileLayer;
     private int tileUnderPlayer;
     private readonly string nameTileLayer = "Tile";
@@ -56,6 +57,17 @@ public class Player : MonoBehaviour
         moveInput = context.ReadValue<Vector2>();
     }
 
+    public void ReadLookInput(InputAction.CallbackContext context)
+    {
+        if (context.canceled)
+        {
+            SetAnimationIdle();
+            return;
+        }
+        SetAnimationIdle();
+        lookDirection = context.ReadValue<Vector2>();
+    }
+
     private void Move()
     {
         Vector3 movement = new Vector3(moveInput.x, moveInput.y, 0f);
@@ -66,8 +78,19 @@ public class Player : MonoBehaviour
     {
         if (context.performed)
         {
-            Debug.Log("Action performed!");
+            SpawnTurret();
         }
+    }
+
+    private void SpawnTurret()
+    {
+        GameObject turretToSpawn = turrets[0];
+        if (highlight.gameObject.activeSelf)
+        {
+            Instantiate(turretToSpawn, highlight.position, Quaternion.identity);
+        }
+        
+
     }
     private void SetAnimationWalking()
     {
@@ -83,7 +106,10 @@ public class Player : MonoBehaviour
 
     private void SetAnimationIdle()
     {
-        lookDirection = moveInput;
+        if (moveInput.magnitude > 0)
+        {
+            lookDirection = moveInput;
+        }
         animator.SetBool("IsWalking", false);
         animator.SetFloat("LastInputX", lookDirection.x);
         animator.SetFloat("LastInputY", lookDirection.y);
