@@ -1121,6 +1121,7 @@ GameObject:
   - component: {fileID: 169202845}
   - component: {fileID: 169202847}
   - component: {fileID: 169202846}
+  - component: {fileID: 169202848}
   m_Layer: 0
   m_Name: Eggnog
   m_TagString: Untagged
@@ -1190,7 +1191,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 160855885
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 801bf39616dad394386585d39362930f, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1224,6 +1225,41 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &169202848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169202844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daa3900ef49f344f99e23a41b82fd17d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tower
+  turretRotationPoint: {fileID: 169202845}
+  targetLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  targetingRange: 3
+  towerName: 
+  currentTarget: {fileID: 0}
+  currentData:
+    towerLevel: 0
+    upgradePrice: 0
+    buyPrice: 0
+    sellPrice: 0
+    range: 0
+    attackRange: 0
+    dmg: 0
+    timeToShot: 0
+    attackSpeedMultiplier: 0
+    moveSpeed: 0
+  shootPosition: {fileID: 169202845}
+  positionNode: {x: 0, y: 0, z: 0}
+  bullet: {fileID: 4727328240883163630, guid: d25f45df3efecbb4295dc0a839bca6d0, type: 3}
+  isTwoAngles: 1
+  audioAttack: {fileID: 0}
 --- !u!4 &173197621 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 537264733805282575, guid: 0dc3acffa8a804d4583131d557d088d6, type: 3}
@@ -4793,7 +4829,6 @@ GameObject:
   - component: {fileID: 790052831}
   - component: {fileID: 790052830}
   - component: {fileID: 790052829}
-  - component: {fileID: 790052828}
   m_Layer: 0
   m_Name: TowerEggnog
   m_TagString: Untagged
@@ -4801,40 +4836,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &790052828
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 790052827}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: daa3900ef49f344f99e23a41b82fd17d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Tower
-  turretRotationPoint: {fileID: 169202845}
-  targetLayerMask:
-    serializedVersion: 2
-    m_Bits: 128
-  targetingRange: 3
-  towerName: 
-  currentTarget: {fileID: 0}
-  currentData:
-    towerLevel: 0
-    upgradePrice: 0
-    buyPrice: 0
-    sellPrice: 0
-    range: 0
-    attackRange: 0
-    dmg: 0
-    timeToShot: 0
-    attackSpeedMultiplier: 0
-    moveSpeed: 0
-  shootPosition: {fileID: 169202845}
-  positionNode: {x: 0, y: 0, z: 0}
-  bullet: {fileID: 0}
-  audioAttack: {fileID: 0}
 --- !u!95 &790052829
 Animator:
   serializedVersion: 7
@@ -4925,7 +4926,7 @@ Transform:
   m_GameObject: {fileID: 790052827}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: -1.79, z: 0}
+  m_LocalPosition: {x: 1.03, y: -1.79, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -6610,6 +6611,7 @@ MonoBehaviour:
   shootPosition: {fileID: 0}
   positionNode: {x: 0, y: 0, z: 0}
   bullet: {fileID: 0}
+  isTwoAngles: 0
   audioAttack: {fileID: 0}
 --- !u!114 &996140755
 MonoBehaviour:
@@ -6644,6 +6646,7 @@ MonoBehaviour:
   shootPosition: {fileID: 0}
   positionNode: {x: 0, y: 0, z: 0}
   bullet: {fileID: 0}
+  isTwoAngles: 0
   audioAttack: {fileID: 0}
 --- !u!1001 &1016988274
 PrefabInstance:
@@ -10659,6 +10662,7 @@ GameObject:
   - component: {fileID: 1704237740}
   - component: {fileID: 1704237742}
   - component: {fileID: 1704237741}
+  - component: {fileID: 1704237743}
   m_Layer: 0
   m_Name: Penguin
   m_TagString: Untagged
@@ -10762,6 +10766,41 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1704237743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704237739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daa3900ef49f344f99e23a41b82fd17d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tower
+  turretRotationPoint: {fileID: 1704237740}
+  targetLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  targetingRange: 3
+  towerName: 
+  currentTarget: {fileID: 0}
+  currentData:
+    towerLevel: 1
+    upgradePrice: 0
+    buyPrice: 0
+    sellPrice: 0
+    range: 0
+    attackRange: 0
+    dmg: 1
+    timeToShot: 0
+    attackSpeedMultiplier: 0
+    moveSpeed: 0
+  shootPosition: {fileID: 1664482168}
+  positionNode: {x: 0, y: 0, z: 0}
+  bullet: {fileID: 4727328240883163630, guid: d25f45df3efecbb4295dc0a839bca6d0, type: 3}
+  isTwoAngles: 0
+  audioAttack: {fileID: 0}
 --- !u!4 &1706249408 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 537264733805282575, guid: 0dc3acffa8a804d4583131d557d088d6, type: 3}
@@ -11015,7 +11054,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1734706252}
   - component: {fileID: 1734706251}
-  - component: {fileID: 1734706255}
   m_Layer: 0
   m_Name: TowerPenguin
   m_TagString: Untagged
@@ -11099,40 +11137,6 @@ Transform:
   - {fileID: 1664482168}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1734706255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1734706249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: daa3900ef49f344f99e23a41b82fd17d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Tower
-  turretRotationPoint: {fileID: 1704237740}
-  targetLayerMask:
-    serializedVersion: 2
-    m_Bits: 128
-  targetingRange: 3
-  towerName: 
-  currentTarget: {fileID: 0}
-  currentData:
-    towerLevel: 1
-    upgradePrice: 0
-    buyPrice: 0
-    sellPrice: 0
-    range: 0
-    attackRange: 0
-    dmg: 1
-    timeToShot: 0
-    attackSpeedMultiplier: 0
-    moveSpeed: 0
-  shootPosition: {fileID: 1664482168}
-  positionNode: {x: 0, y: 0, z: 0}
-  bullet: {fileID: 4727328240883163630, guid: d25f45df3efecbb4295dc0a839bca6d0, type: 3}
-  audioAttack: {fileID: 0}
 --- !u!4 &1739794424 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 537264733805282575, guid: 0dc3acffa8a804d4583131d557d088d6, type: 3}

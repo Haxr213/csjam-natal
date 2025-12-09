@@ -28,6 +28,8 @@ public class Tower : MonoBehaviour
 
     private bool hasAppliedDamage = false; // Variável de controle para evitar múltiplos danos
     private bool isAttacking = false; // Controla se está atacando
+    [SerializeField]
+    private bool isTwoAngles;
 
     [SerializeField]
     private AudioClip audioAttack;
@@ -38,7 +40,7 @@ public class Tower : MonoBehaviour
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        anim = GetComponentInChildren<Animator>();
+        anim = GetComponent<Animator>();
 
 
         shootTimerCoroutine = StartCoroutine(ShootTimer());
@@ -91,7 +93,10 @@ public class Tower : MonoBehaviour
         float normalizedAngle = angle < 0 ? angle + 360f : angle;
 
         // 6 direções → cada uma é 60 graus
-        directionIndex = Mathf.FloorToInt(normalizedAngle / 60f);
+        if (isTwoAngles)
+            directionIndex = Mathf.FloorToInt(normalizedAngle / 90f);
+        else
+            directionIndex = Mathf.FloorToInt(normalizedAngle / 60f);
 
         anim.SetFloat("directionIndex", directionIndex);
     }
