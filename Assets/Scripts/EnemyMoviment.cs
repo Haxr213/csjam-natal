@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class EnemyMoviment : MonoBehaviour
 {
+    public LevelManager levelManager;
     [Header("References")]
     [SerializeField] private Rigidbody2D rb;
 
@@ -12,7 +13,7 @@ public class EnemyMoviment : MonoBehaviour
     private int pathIndex = 0;
     private void Start()
     {
-        target = LevelManager.main.path[pathIndex];
+        target = levelManager.path[pathIndex];
     }
 
     private void Update()
@@ -20,19 +21,19 @@ public class EnemyMoviment : MonoBehaviour
         if (Vector2.Distance(target.position, transform.position) < 0.1f)
         {
             pathIndex++;
-            if (pathIndex ==  LevelManager.main.path.Length)
+            if (pathIndex == levelManager.path.Length)
             {
                 Debug.Log("Enemy reached the end of the path.");
                 Destroy(gameObject);
                 return;
             }
-            target = LevelManager.main.path[pathIndex];
+            target = levelManager.path[pathIndex];
         }
     }
 
     private void FixedUpdate()
     {
         Vector2 direction = (target.position - transform.position).normalized;
-        rb.linearVelocity = direction  * moveSpeed;
+        rb.linearVelocity = direction * moveSpeed;
     } 
 }
