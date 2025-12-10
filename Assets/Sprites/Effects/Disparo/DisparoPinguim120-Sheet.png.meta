@@ -1,0 +1,442 @@
+fileFormatVersion: 2
+guid: cdfcb4d73554d674ea0bff57b342da13
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 371776502543695643
+    second: DisparoPinguim120-Sheet_0
+  - first:
+      213: -3675478176922923620
+    second: DisparoPinguim120-Sheet_1
+  - first:
+      213: 8807502773591794811
+    second: DisparoPinguim120-Sheet_2
+  - first:
+      213: 4286702959636022939
+    second: DisparoPinguim120-Sheet_3
+  - first:
+      213: 8831596034256950976
+    second: DisparoPinguim120-Sheet_4
+  - first:
+      213: 5371484306468077468
+    second: DisparoPinguim120-Sheet_5
+  - first:
+      213: -826021365070504075
+    second: DisparoPinguim120-Sheet_6
+  - first:
+      213: 254249903795133447
+    second: DisparoPinguim120-Sheet_7
+  - first:
+      213: 5975820516875248635
+    second: DisparoPinguim120-Sheet_8
+  - first:
+      213: 3488569029314954955
+    second: DisparoPinguim120-Sheet_9
+  - first:
+      213: 7426400489537084743
+    second: DisparoPinguim120-Sheet_10
+  - first:
+      213: 2518113955590421337
+    second: DisparoPinguim120-Sheet_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DisparoPinguim120-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 58
+        width: 131
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1f34f162c0d82500800000000000000
+      internalID: 371776502543695643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DisparoPinguim120-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 55
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9d0fc452141efcc0800000000000000
+      internalID: -3675478176922923620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DisparoPinguim120-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 44
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b74e432cb198a3a70800000000000000
+      internalID: 8807502773591794811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DisparoPinguim120-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 63
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9688be31ad6d7b30800000000000000
+      internalID: 4286702959636022939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DisparoPinguim120-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 63
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c652a52dc1209a70800000000000000
+      internalID: 8831596034256950976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DisparoPinguim120-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 48
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9f7d9374885b8a40800000000000000
+      internalID: 5371484306468077468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DisparoPinguim120-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 47
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57fd616e1f16984f0800000000000000
+      internalID: -826021365070504075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DisparoPinguim120-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 33
+        width: 31
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70cd2efb0f6478300800000000000000
+      internalID: 254249903795133447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DisparoPinguim120-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 67
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf327dd49116ee250800000000000000
+      internalID: 5975820516875248635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DisparoPinguim120-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 53
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc64fb68c03e96030800000000000000
+      internalID: 3488569029314954955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DisparoPinguim120-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 47
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74d15a206efdf0760800000000000000
+      internalID: 7426400489537084743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DisparoPinguim120-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 33
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95bbbe21d4322f220800000000000000
+      internalID: 2518113955590421337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      DisparoPinguim120-Sheet_0: 371776502543695643
+      DisparoPinguim120-Sheet_1: -3675478176922923620
+      DisparoPinguim120-Sheet_10: 7426400489537084743
+      DisparoPinguim120-Sheet_11: 2518113955590421337
+      DisparoPinguim120-Sheet_2: 8807502773591794811
+      DisparoPinguim120-Sheet_3: 4286702959636022939
+      DisparoPinguim120-Sheet_4: 8831596034256950976
+      DisparoPinguim120-Sheet_5: 5371484306468077468
+      DisparoPinguim120-Sheet_6: -826021365070504075
+      DisparoPinguim120-Sheet_7: 254249903795133447
+      DisparoPinguim120-Sheet_8: 5975820516875248635
+      DisparoPinguim120-Sheet_9: 3488569029314954955
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
