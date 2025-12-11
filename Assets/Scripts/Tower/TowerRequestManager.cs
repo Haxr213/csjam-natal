@@ -44,21 +44,5 @@ public class TowerRequestManager : MonoBehaviour
             Debug.Log("Not money for tower : " + towerName);
             return;
         }
-
-        positionNode = Node.selectedNode.transform.position;
-        var towerGo = Instantiate(tower, positionNode, tower.transform.rotation);
-        Node.selectedNode.towerOcuped = towerGo;
-        Node.selectedNode.isOcuped = true;
-
-        // Define o positionNode no script Tower
-        Tower towerScript = towerGo.GetComponent<Tower>();
-        if (towerScript != null)
-        {
-            towerScript.positionNode = positionNode;
-        }
-
-        CloseRequestPanel();
-        Node.selectedNode.OnCloseSelection();
-        Node.selectedNode = null;
     }
 }

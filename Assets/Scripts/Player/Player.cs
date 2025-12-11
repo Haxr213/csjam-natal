@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     [SerializeField] private LayerMask slotLayer;
     [SerializeField] private Transform highlight;
     [SerializeField] private GameObject[] turrets;
+    [SerializeField] private TowerRequestManager towerRequestManager;
 
     [Header("Attributes")]
     [SerializeField] private float speed = 5f;
@@ -87,10 +88,13 @@ public class Player : MonoBehaviour
         GameObject turretToSpawn = turrets[0];
         if (highlight.gameObject.activeSelf)
         {
-            Instantiate(turretToSpawn, highlight.position, Quaternion.identity);
+            towerRequestManager.RequestTowerBuy("Penguin");
+            if (towerRequestManager.isTowerPriced)
+            {
+                Instantiate(turretToSpawn, highlight.position, Quaternion.identity);
+                towerRequestManager.isTowerPriced = false;
+            }
         }
-        
-
     }
     private void SetAnimationWalking()
     {

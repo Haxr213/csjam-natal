@@ -34,6 +34,7 @@ public class ResourceUI : MonoBehaviour
     {
         woodTXT.text = value;
     }
+
     public void UpdateSugarText(string value)
     {
         sugarTXT.text = value;

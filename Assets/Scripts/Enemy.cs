@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
 
     [Header("Life")]
     public bool isDead;
-    public float maxLife = 100;
+    public float maxLife = 1;
     public float currentLife = 0;
 
     void Start()

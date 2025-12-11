@@ -3,10 +3,10 @@ using UnityEngine;
 public class PlayerData : MonoBehaviour
 {
     public static PlayerData instance;
-    public int iron = 0;
-    public int wood = 0;
-    public int sugar = 0;
-    public int crystal = 0;
+    public int iron = 5;
+    public int wood = 5;
+    public int sugar = 5;
+    public int crystal = 5;
 
     public void Awake()
     {

@@ -34,7 +34,7 @@ public class Tower : MonoBehaviour
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        animTower = GetComponent<Animator>();
+        animTower = GetComponentInChildren<Animator>();
 
 
         StartCoroutine(ShootTimer());
@@ -159,6 +159,7 @@ public class Tower : MonoBehaviour
                     animTower.SetTrigger("Attack");
 
                     Debug.Log($"Atirando! Tempo de espera: {currentData.timeToShot} segundos.");
+                    yield return new WaitForSeconds(0.2f); // Pequeno delay antes de atirar para sincronizar com a animação
                     Shoot();
 
                     // Aguarda o tempo definido em timeToShot antes de permitir um novo ataque
