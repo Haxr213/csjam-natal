@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
 
     [Header("Attributes")]
     [SerializeField] private float speed = 5f;
+    [SerializeField] private float ease = 0.2f;
     [SerializeField] private float tileSize = 1f;
     [SerializeField] private Vector2 moveInput;
     private Rigidbody2D rb;
@@ -20,6 +21,7 @@ public class Player : MonoBehaviour
     private int tileUnderPlayer;
     private readonly string nameTileLayer = "Tile";
     private readonly string nameTileUnderPlayer = "TileUnderPlayer";
+    private Vector2 velocityRef;
 
     private void Start()
     {
@@ -70,8 +72,15 @@ public class Player : MonoBehaviour
 
     private void Move()
     {
+        //Vector3 movement = new Vector3(moveInput.x, moveInput.y, 0f);
+        //Debug.Log("Movement:" + movement * speed);
+        // rb.linearVelocity = movement * speed;
+
         Vector3 movement = new Vector3(moveInput.x, moveInput.y, 0f);
-        rb.linearVelocity = movement * speed;
+        Vector2 targetVelocity = new Vector2(movement.x, movement.y) * speed;
+        // SmoothDamp usa 'ease' como smoothTime (tempo aproximado para alcançar o alvo)
+        rb.linearVelocity = Vector2.SmoothDamp(rb.linearVelocity, targetVelocity, ref velocityRef, ease);
+        //Debug.Log("Velocity:" + rb.linearVelocity);
     }
 
     public void ReadActionInput(InputAction.CallbackContext context)
