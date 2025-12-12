@@ -8,14 +8,14 @@ public class TowerData
 
     [Header("Tower Price")]
     public int upgradePrice;
-    public int buyPrice;
-    public int sellPrice;
+    public int ironPrice;
+    public int woodPrice;
+    public int sugarPrice;
+    public int crystalPrice;
 
     [Header("Tower Settings")]
     public float range;
-    public float attackRange;
     public float dmg;
     public float timeToShot;
     public float attackSpeedMultiplier;
-    public float moveSpeed;
 }
