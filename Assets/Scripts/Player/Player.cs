@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     [Header("Attributes")]
     [SerializeField] private float speed = 5f;
     [SerializeField] private float ease = 0.2f;
+    [SerializeField] private TowerRequestManager towerRequestManager;
     [SerializeField] private float tileSize = 1f;
     [SerializeField] private Vector2 moveInput;
     private Rigidbody2D rb;
@@ -96,10 +97,13 @@ public class Player : MonoBehaviour
         GameObject turretToSpawn = turrets[0];
         if (highlight.gameObject.activeSelf)
         {
-            Instantiate(turretToSpawn, highlight.position, Quaternion.identity);
+            towerRequestManager.RequestTowerBuy("Penguin");
+            if (towerRequestManager.isTowerPriced)
+            {
+                Instantiate(turretToSpawn, highlight.position, Quaternion.identity);
+                towerRequestManager.isTowerPriced = false;
+            }
         }
-        
-
     }
     private void SetAnimationWalking()
     {
