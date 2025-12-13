@@ -8,7 +8,10 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform highlight;
     [SerializeField] private GameObject[] turrets;
     private TowerSlot currentSlot;
+
+    [Header("Attributes")]
     [SerializeField] private float speed = 5f;
+    [SerializeField] private float ease = 0.2f;
     [SerializeField] private TowerRequestManager towerRequestManager;
     [SerializeField] private float tileSize = 1f;
     [SerializeField] private Vector2 moveInput;

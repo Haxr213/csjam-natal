@@ -103,6 +103,8 @@ public class Tower : MonoBehaviour
 
     private bool IsTargetValid()
     {
+        if (currentTarget == null) return false;
+        if (currentTarget.isDead) return false;
 
         float distance = Vector2.Distance(transform.position, currentTarget.transform.position);
         return distance <= currentData.range;
@@ -111,6 +113,7 @@ public class Tower : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Handles.color = Color.cyan;
+        Handles.DrawWireDisc(transform.position, transform.forward, currentData.range);
     }
 
     public void SpawnerEggnog()
@@ -165,7 +168,11 @@ public class Tower : MonoBehaviour
                         animShot.SetTrigger("Attack");
                     
                     animTower.SetTrigger("Attack");
+
+                    Debug.Log($"Atirando! Tempo de espera: {currentData.timeToShot} segundos.");
+                    yield return new WaitForSeconds(0.2f); // Pequeno delay antes de atirar para sincronizar com a animação
                     Shoot();
+
                     // Aguarda o tempo definido em timeToShot antes de permitir um novo ataque
                     yield return new WaitForSeconds(currentData.timeToShot);
 
