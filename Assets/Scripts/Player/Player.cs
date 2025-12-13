@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,10 +7,8 @@ public class Player : MonoBehaviour
     [SerializeField] private LayerMask slotLayer;
     [SerializeField] private Transform highlight;
     [SerializeField] private GameObject[] turrets;
-
-    [Header("Attributes")]
+    private TowerSlot currentSlot;
     [SerializeField] private float speed = 5f;
-    [SerializeField] private float ease = 0.2f;
     [SerializeField] private TowerRequestManager towerRequestManager;
     [SerializeField] private float tileSize = 1f;
     [SerializeField] private Vector2 moveInput;
@@ -94,17 +91,24 @@ public class Player : MonoBehaviour
 
     private void SpawnTurret()
     {
-        GameObject turretToSpawn = turrets[0];
-        if (highlight.gameObject.activeSelf)
+        if (!highlight.gameObject.activeSelf) return;
+        if (currentSlot == null) return;
+
+        if (currentSlot.isOccupied)
         {
-            towerRequestManager.RequestTowerBuy("Penguin");
-            if (towerRequestManager.isTowerPriced)
-            {
-                Instantiate(turretToSpawn, highlight.position, Quaternion.identity);
-                towerRequestManager.isTowerPriced = false;
-            }
+            Debug.Log("Slot já ocupado.");
+            return;
         }
+
+        towerRequestManager.RequestTowerBuy("Penguin");
+
+        if (!towerRequestManager.isTowerPriced) return;
+
+        GameObject turret = Instantiate(turrets[0], highlight.position, Quaternion.identity);
+        currentSlot.Occupy();
+        towerRequestManager.isTowerPriced = false;
     }
+
     private void SetAnimationWalking()
     {
         bool isWalking = moveInput.magnitude > 0;
@@ -141,10 +145,13 @@ public class Player : MonoBehaviour
         {
             highlight.gameObject.SetActive(true);
             highlight.position = hit.collider.transform.position;
+
+            currentSlot = hit.collider.GetComponent<TowerSlot>();
         }
         else
         {
             highlight.gameObject.SetActive(false);
+            currentSlot = null;
         }
     }
 

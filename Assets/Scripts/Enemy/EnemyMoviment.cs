@@ -8,6 +8,7 @@ public class EnemyMoviment : MonoBehaviour
 
     [Header("Attributes")]
     [SerializeField] private float moveSpeed = 2f;
+    private float originalSpeed;
 
     private Animator anim;
     private Transform target; 
@@ -17,6 +18,7 @@ public class EnemyMoviment : MonoBehaviour
     {
         target = levelManager.path[pathIndex];
         anim = GetComponent<Animator>();
+        originalSpeed = moveSpeed;
     }
 
     private void Update()
@@ -57,5 +59,15 @@ public class EnemyMoviment : MonoBehaviour
             if (dir.y > 0) return 0; // Up
             else return 2;           // Down
         }
+    }
+
+    public void ApplySlow(float multiplier)
+    {
+        moveSpeed = originalSpeed * multiplier;
+    }
+
+    public void RemoveSlow()
+    {
+        moveSpeed = originalSpeed;
     }
 }

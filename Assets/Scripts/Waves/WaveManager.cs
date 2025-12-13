@@ -10,10 +10,11 @@ public class WaveManager : MonoBehaviour
     public int currentWave;
     public Transform initPosition;
     private Enemy enemy;
-    public LevelManager levelManager;
+    private LevelManager levelManager;
 
     private void Start()
     {
+        levelManager = GetComponent<LevelManager>();
         StartCoroutine(ProcessWave());
     }
 
@@ -69,7 +70,7 @@ public class WaveManager : MonoBehaviour
         {
             yield return StartCoroutine(WaitForEnemiesToBeDestroyed(currentWaveEnemies));
 
-            Debug.Log("Nível Terminado!");
+            Debug.Log("Nï¿½vel Terminado!");
             wavesFinish = true;
         }
         else
@@ -82,10 +83,10 @@ public class WaveManager : MonoBehaviour
     {
         while (true)
         {
-            // Remove os inimigos que já foram destruídos
+            // Remove os inimigos que jï¿½ foram destruï¿½dos
             enemies.RemoveAll(enemy => enemy == null);
 
-            // Se não houver mais inimigos, saia do loop
+            // Se nï¿½o houver mais inimigos, saia do loop
             if (enemies.Count == 0)
                 yield break;
 

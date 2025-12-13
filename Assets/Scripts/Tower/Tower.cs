@@ -22,10 +22,10 @@ public class Tower : MonoBehaviour
 
     public Bullet bullet;
 
-    private bool hasAppliedDamage = false; // Variável de controle para evitar múltiplos danos
-    private bool isAttacking = false; // Controla se está atacando
     [SerializeField]
     private bool eggnog;
+    [SerializeField]
+    private SlimeSpawner slimeSpawner;
 
     [SerializeField]
     private AudioClip audioAttack;
@@ -43,7 +43,13 @@ public class Tower : MonoBehaviour
     private void Update()
     {
         //Debug.Log( "Target:" + target);
-        if(target == null)
+        if(!IsTargetValid())
+        {
+            target = null;
+            currentTarget = null;
+        }
+
+        if (target == null)
         {
             FindTarget();
             return;
@@ -95,27 +101,29 @@ public class Tower : MonoBehaviour
         animTower.SetFloat("directionIndex", directionIndex);
     }
 
+    private bool IsTargetValid()
+    {
+
+        float distance = Vector2.Distance(transform.position, currentTarget.transform.position);
+        return distance <= currentData.range;
+    }
+
     private void OnDrawGizmosSelected()
     {
         Handles.color = Color.cyan;
-        Handles.DrawWireDisc(transform.position, transform.forward, currentData.range);
     }
 
-    // Método chamado pela animação quando termina
-    public void OnAttackAnimationEnd()
+    public void SpawnerEggnog()
     {
-        isAttacking = false;
-        hasAppliedDamage = false;
-    }
-
-    // Método chamado pela animação para aplicar o dano
-    public void OnAttackAnimationEvent()
-    {
-        if (currentTarget != null && !currentTarget.isDead && !hasAppliedDamage)
+        if (currentTarget != null && !currentTarget.isDead)
         {
             audioSource.PlayOneShot(audioAttack);
             ApplyDamage(currentData.dmg);
-            hasAppliedDamage = true; // Impede múltiplos danos
+
+            if (eggnog) // se essa torre for a de gosma
+            {
+                slimeSpawner.SpawnSlimeNearTower(currentTarget.transform.position);
+            }
         }
     }
 
@@ -143,7 +151,7 @@ public class Tower : MonoBehaviour
         while (true)
         {
             // Verifica se há um alvo
-            if (currentTarget != null)
+            if (IsTargetValid())
             {
                 if (canShoot)
                 {
@@ -157,11 +165,7 @@ public class Tower : MonoBehaviour
                         animShot.SetTrigger("Attack");
                     
                     animTower.SetTrigger("Attack");
-
-                    Debug.Log($"Atirando! Tempo de espera: {currentData.timeToShot} segundos.");
-                    yield return new WaitForSeconds(0.2f); // Pequeno delay antes de atirar para sincronizar com a animação
                     Shoot();
-
                     // Aguarda o tempo definido em timeToShot antes de permitir um novo ataque
                     yield return new WaitForSeconds(currentData.timeToShot);
 
@@ -191,10 +195,11 @@ public class Tower : MonoBehaviour
             bulletGo.SetBullet(currentTarget, currentData.dmg, this);
             bulletGo.SetDirection(direction);
             audioSource.PlayOneShot(audioAttack);
+
         }
         else
         {
-            Debug.LogError("Bullet, shootPosition ou currentTarget não atribuídos.");
+            SpawnerEggnog();
         }
     }
 }

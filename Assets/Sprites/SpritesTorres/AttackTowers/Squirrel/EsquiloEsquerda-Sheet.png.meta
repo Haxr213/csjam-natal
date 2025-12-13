@@ -131,12 +131,12 @@ TextureImporter:
       name: EsquiloEsquerda-Sheet_0
       rect:
         serializedVersion: 2
-        x: 23
-        y: 8
-        width: 84
-        height: 89
+        x: 0
+        y: 0
+        width: 120
+        height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -153,12 +153,12 @@ TextureImporter:
       name: EsquiloEsquerda-Sheet_1
       rect:
         serializedVersion: 2
-        x: 143
-        y: 8
-        width: 84
-        height: 95
+        x: 120
+        y: 0
+        width: 120
+        height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -175,12 +175,12 @@ TextureImporter:
       name: EsquiloEsquerda-Sheet_2
       rect:
         serializedVersion: 2
-        x: 263
-        y: 8
-        width: 84
-        height: 102
+        x: 240
+        y: 0
+        width: 120
+        height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -197,12 +197,12 @@ TextureImporter:
       name: EsquiloEsquerda-Sheet_3
       rect:
         serializedVersion: 2
-        x: 383
-        y: 8
-        width: 84
-        height: 105
+        x: 360
+        y: 0
+        width: 120
+        height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -219,12 +219,12 @@ TextureImporter:
       name: EsquiloEsquerda-Sheet_4
       rect:
         serializedVersion: 2
-        x: 493
-        y: 8
-        width: 94
-        height: 105
+        x: 480
+        y: 0
+        width: 120
+        height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -241,12 +241,12 @@ TextureImporter:
       name: EsquiloEsquerda-Sheet_5
       rect:
         serializedVersion: 2
-        x: 605
-        y: 8
-        width: 102
-        height: 105
+        x: 600
+        y: 0
+        width: 120
+        height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -263,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 80aa41e8f2365244a85b1c01b058f7f2
     internalID: 0
     vertices: []
     indices: 
@@ -271,7 +271,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":120.0,"y":120.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       EsquiloEsquerda-Sheet_0: -3418107700310316654
       EsquiloEsquerda-Sheet_1: -4745147813189164917
