@@ -34273,14 +34273,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
-    - target: {fileID: 8989286666173409305, guid: d2d231b1a32204678a82a09e7b02ef1e, type: 3}
-      propertyPath: towers.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8989286666173409305, guid: d2d231b1a32204678a82a09e7b02ef1e, type: 3}
-      propertyPath: 'towers.Array.data[2]'
-      value: 
-      objectReference: {fileID: 7535522514512627567, guid: 50dccf08ee6844741af4d4390b3848f2, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

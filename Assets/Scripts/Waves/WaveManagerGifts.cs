@@ -11,10 +11,7 @@ public class WaveManagerGifts : MonoBehaviour
     public int currentWave;
     public Transform initPosition;
     private LevelManager levelManager;
-    private int goodGiftsArrived;
-    private int badGiftsArrived;
-    public int GoodGiftsArrived => goodGiftsArrived;
-    public int BadGiftsArrived => badGiftsArrived;
+    public int goodGiftsArrived;
 
     [Header("Gift Prefabs")]
     [SerializeField] private Gift[] goodGiftPrefabs;
@@ -147,7 +144,6 @@ public class WaveManagerGifts : MonoBehaviour
     {
         activeGifts.Clear();
         goodGiftsArrived = 0;
-        badGiftsArrived = 0;
 
         for (int i = 0; i < gifts[currentWave].totalGifts; i++)
         {
@@ -191,7 +187,7 @@ public class WaveManagerGifts : MonoBehaviour
         if (gift.quality == GiftQuality.Good)
             goodGiftsArrived++;
         else
-            badGiftsArrived++;
+            goodGiftsArrived--;
 
         activeGifts.Remove(gift);
     }
