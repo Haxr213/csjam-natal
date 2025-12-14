@@ -41,7 +41,7 @@ public class SlimeSpawner : MonoBehaviour
         {
             Instantiate(slimePrefab, bestPoint, Quaternion.identity);
             spawnedSlimesPositions.Add(bestPoint);
-            Debug.Log("Slime spawnado no segmento do path");
+            //Debug.Log("Slime spawnado no segmento do path");
         }
     }
 

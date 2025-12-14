@@ -24,7 +24,7 @@ public class InputManager : ScriptableObject
         {
             _playerInput = new PlayerController();
             // enable the input so we start getting events
-            _playerInput.Player.Enable();
+            _playerInput.Enable();
 
             InputSystem.onActionChange += TrackActions;
         }
@@ -46,7 +46,7 @@ public class InputManager : ScriptableObject
         {
             InputAction inputAction = (InputAction)obj;
             InputControl activeControl = inputAction.activeControl;
-            Debug.LogFormat("Current Control {0}", activeControl);
+            //Debug.LogFormat("Current Control {0}", activeControl);
 
             var newDevice = DeviceType.Keyboard;
 
@@ -62,12 +62,12 @@ public class InputManager : ScriptableObject
                 // we can further categorize these if we had spritesheets per brand
                 if (activeControl.device is XInputController)
                 {
-                    Debug.LogFormat("Device is Xbox Controller");
+                    //Debug.LogFormat("Device is Xbox Controller");
                 }
 
                 if (activeControl.device is DualSenseGamepadHID || activeControl.device is DualShockGamepad)
                 {
-                    Debug.LogFormat("Device is Playstation");
+                    //Debug.LogFormat("Device is Playstation");
                 }
             }
 

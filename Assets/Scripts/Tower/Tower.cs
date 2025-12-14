@@ -61,8 +61,8 @@ public class Tower : MonoBehaviour
     private void FindTarget()
     {
         RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, currentData.range, Vector2.zero, 0f, targetLayerMask);
-        Debug.Log("Hits found: " + hits.Length);
-        Debug.Log("TargetLayerMask: " + targetLayerMask.value);
+        //Debug.Log("Hits found: " + hits.Length);
+        //Debug.Log("TargetLayerMask: " + targetLayerMask.value);
 
         if(hits.Length > 0)
         {
@@ -169,12 +169,8 @@ public class Tower : MonoBehaviour
                     
                     animTower.SetTrigger("Attack");
 
-                    Debug.Log($"Atirando! Tempo de espera: {currentData.timeToShot} segundos.");
-                    yield return new WaitForSeconds(0.2f); // Pequeno delay antes de atirar para sincronizar com a animação
+                    //Debug.Log($"Atirando! Tempo de espera: {currentData.timeToShot} segundos.");
                     Shoot();
-
-                    // Aguarda o tempo definido em timeToShot antes de permitir um novo ataque
-                    yield return new WaitForSeconds(currentData.timeToShot);
 
                     // Permite um novo ataque
                     canShoot = true;

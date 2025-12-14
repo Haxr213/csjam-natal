@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6790646410168374598}
   - component: {fileID: 2360286783149323194}
   - component: {fileID: 6550376433424942742}
+  - component: {fileID: 4665366909433077163}
   - component: {fileID: 65896294813648912}
   - component: {fileID: 6486601704084779713}
   - component: {fileID: 3689039924157310330}
@@ -170,11 +171,130 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 0bdd5a08-174e-48b6-8c4d-0792c5ea5efd
     m_ActionName: 'Player/Look[/Mouse/delta]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 65896294813648912}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: ReadSpawnTurretPenguinInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 30de2b1a-e669-43f2-ad51-15e2e085fb41
+    m_ActionName: 'Tower/T1[/Keyboard/1]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 65896294813648912}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: ReadSpawnTurretEggnog
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: b3007054-6024-434c-a6ed-8b6efe0d1549
+    m_ActionName: 'Tower/T2[/Keyboard/2]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 65896294813648912}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: ReadSpawnTurretSquirrel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0afdd4b8-7e6d-4fca-9216-9698b2b734f0
+    m_ActionName: 'Tower/T3[/Keyboard/3]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 65896294813648912}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: ReadCancelInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 621e1618-b8bd-486e-9bf1-1e6a128e9efd
+    m_ActionName: 'Tower/Cancel[/Keyboard/escape]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 65896294813648912}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: ReadRemoveTurretInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ef9958ad-32ae-4dcf-9996-168e9a112668
+    m_ActionName: 'Remove/Tower[/Keyboard/e]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 65896294813648912}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: ReadCancelInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 722aeb58-6e9a-4f2f-94df-e535aff89efc
+    m_ActionName: 'Remove/Cancel[/Keyboard/escape]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &4665366909433077163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685980256792646925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb0a802f10c724d9487998188caf12a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerManager
+  towersUI: {fileID: 0}
+  buttonUI: {fileID: 0}
+  removeTurretUI: {fileID: 0}
+  positionYTowersActive: 100
+  positionYTowersInactive: -500
+  positionYButtonActive: 500
+  positionYButtonInactive: 50
+  positionYRemoveTowersActive: 100
+  positionYRemoveTowersInactive: -500
+  actionButton: '{Player/Action}'
+  cancelButton: '{Tower/Cancel}'
 --- !u!114 &65896294813648912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,11 +312,16 @@ MonoBehaviour:
     m_Bits: 256
   highlight: {fileID: 6216841111709582005}
   turrets:
-  - {fileID: 8495418807207049999, guid: 4930de24afcae42caa3f735f2775bacc, type: 3}
-  speed: 3
+  - {fileID: 4533823518517803186, guid: 595d9466394e97b4f8d979b21937a8cd, type: 3}
+  - {fileID: 678005172728082739, guid: 50dccf08ee6844741af4d4390b3848f2, type: 3}
+  - {fileID: 4533823518517803186, guid: 4b4d1f832e7f5c3449264a7aafc63098, type: 3}
+  speed: 4
+  ease: 0.2
+  towerRequestManager: {fileID: 0}
   tileSize: 1
   moveInput: {x: 0, y: 0}
   lookDirection: {x: 0, y: -1}
+  playerInput: {fileID: 6550376433424942742}
 --- !u!50 &6486601704084779713
 Rigidbody2D:
   serializedVersion: 5
@@ -373,7 +498,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 94c40ea4f1f7c4926bd251112aa7f8e1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5116027845f7ad342a0d47c78f556bbc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

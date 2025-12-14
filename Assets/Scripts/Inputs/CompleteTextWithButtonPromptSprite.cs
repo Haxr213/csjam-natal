@@ -26,7 +26,7 @@ public static class CompleteTextWithButtonPromptSprite
         InputBinding dynamicBinding = inputManager.GetBinding(actionName, deviceType);
         TMP_SpriteAsset spriteAsset = spriteAssets.SpriteAssets[(int)deviceType];
 
-        Debug.LogFormat("Retrieving sprite tag for: {0} whit path: {1}", dynamicBinding.action, dynamicBinding.effectivePath);
+        //Debug.LogFormat("Retrieving sprite tag for: {0} whit path: {1}", dynamicBinding.action, dynamicBinding.effectivePath);
         string stringButtonName = dynamicBinding.effectivePath;
         stringButtonName = RenameInput(stringButtonName, actionName);
 
@@ -51,7 +51,7 @@ public static class CompleteTextWithButtonPromptSprite
         {
             var withBraces = match.Groups[0].Captures[0].Value;
             var innerPart = match.Groups[1].Captures[0].Value;
-            Debug.LogFormat("{0} has {1}", withBraces, innerPart);
+            //Debug.LogFormat("{0} has {1}", withBraces, innerPart);
 
             var tagText = GetSpriteTag(innerPart, deviceType, inputManager, spriteAssets);
 

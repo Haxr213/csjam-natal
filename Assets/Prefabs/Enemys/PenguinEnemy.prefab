@@ -83,8 +83,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 160855885
-  m_SortingLayer: 1
-  m_SortingOrder: 20
+  m_SortingLayer: 2
+  m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 4ec1c978353c63943bc9676060f4609b, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -186,7 +186,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56dccee0fe6d8e04f8b72c1bb955b945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  crystalOnDead: 1
+  sugarOnDead: 2
+  woodOnDead: 0
+  ironOnDead: 0
+  crystalOnDead: 0
   audioDeath: {fileID: 0}
   isDead: 0
   maxLife: 4

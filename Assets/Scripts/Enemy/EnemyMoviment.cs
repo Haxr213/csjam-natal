@@ -13,6 +13,8 @@ public class EnemyMoviment : MonoBehaviour
     private Animator anim;
     private Transform target; 
     private int pathIndex = 0;
+    [SerializeField]
+    private WaveManagerGifts waveManagerGifts;
 
     private void Start()
     {
@@ -30,6 +32,7 @@ public class EnemyMoviment : MonoBehaviour
             {
                 Debug.Log("Enemy reached the end of the path.");
                 Destroy(gameObject);
+                waveManagerGifts.goodGiftsArrived++;
                 return;
             }
             target = levelManager.path[pathIndex];

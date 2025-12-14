@@ -11,10 +11,7 @@ public class WaveManagerGifts : MonoBehaviour
     public int currentWave;
     public Transform initPosition;
     private LevelManager levelManager;
-    private int goodGiftsArrived;
-    private int badGiftsArrived;
-    public int GoodGiftsArrived => goodGiftsArrived;
-    public int BadGiftsArrived => badGiftsArrived;
+    public int goodGiftsArrived;
 
     [Header("Gift Prefabs")]
     [SerializeField] private Gift[] goodGiftPrefabs;
@@ -33,7 +30,7 @@ public class WaveManagerGifts : MonoBehaviour
     {
         CheckCounterForNextWave();
 
-        // Se o jogador quer interagir com o presente, pode usar um método aqui para verificar a posição do highlight
+        // Se o jogador quer interagir com o presente, pode usar um mï¿½todo aqui para verificar a posiï¿½ï¿½o do highlight
         if (highlight.gameObject.activeSelf)
         {
             TryRemoveGiftAtHighlightPosition();
@@ -74,10 +71,10 @@ public class WaveManagerGifts : MonoBehaviour
 
         gifts[currentWave].counterToNextWave = gifts[currentWave].timeForNextWave;
 
-        // Inicia a wave randômica
+        // Inicia a wave randï¿½mica
         yield return StartCoroutine(SpawnGiftWave());
 
-        // Espera todos os presentes sumirem (chegar ao fim ou serem destruídos)
+        // Espera todos os presentes sumirem (chegar ao fim ou serem destruï¿½dos)
         yield return StartCoroutine(WaitForActiveGiftsToEnd());
 
         if (currentWave >= gifts.Count - 1)
@@ -102,7 +99,7 @@ public class WaveManagerGifts : MonoBehaviour
 
     private void TryRemoveGiftAtHighlightPosition()
     {
-        // Verifica se o player está interagindo com o slot do presente
+        // Verifica se o player estï¿½ interagindo com o slot do presente
         Vector2 highlightPos = highlight.position;
         for (int i = activeGifts.Count - 1; i >= 0; i--)
         {
@@ -147,7 +144,6 @@ public class WaveManagerGifts : MonoBehaviour
     {
         activeGifts.Clear();
         goodGiftsArrived = 0;
-        badGiftsArrived = 0;
 
         for (int i = 0; i < gifts[currentWave].totalGifts; i++)
         {
@@ -191,7 +187,7 @@ public class WaveManagerGifts : MonoBehaviour
         if (gift.quality == GiftQuality.Good)
             goodGiftsArrived++;
         else
-            badGiftsArrived++;
+            goodGiftsArrived--;
 
         activeGifts.Remove(gift);
     }

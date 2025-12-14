@@ -344,9 +344,9 @@ MonoBehaviour:
   currentData:
     towerLevel: 1
     upgradePrice: 0
-    ironPrice: 1
+    ironPrice: 0
     woodPrice: 0
-    sugarPrice: 1
+    sugarPrice: 3
     crystalPrice: 0
     range: 3
     dmg: 2

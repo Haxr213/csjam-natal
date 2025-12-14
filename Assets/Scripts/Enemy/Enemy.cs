@@ -3,7 +3,11 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [Header("OnDead")]
-    public int crystalOnDead = 1;
+    public int sugarOnDead;
+    public int woodOnDead;
+    public int ironOnDead;
+    public int crystalOnDead;
+     
     [SerializeField]
     private AudioClip audioDeath;
 
@@ -34,6 +38,9 @@ public class Enemy : MonoBehaviour
 
         //AudioManager.Instance.PlaySoundAtLocation(audioDeath, transform.position, 0.2f);
         Destroy(gameObject);
+        PlayerData.instance.AddSugar(sugarOnDead);
+        PlayerData.instance.AddWood(woodOnDead);
+        PlayerData.instance.AddIron(ironOnDead);
         PlayerData.instance.AddCrystal(crystalOnDead);
     }
 }
