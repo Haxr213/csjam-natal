@@ -1,0 +1,429 @@
+fileFormatVersion: 2
+guid: 8e23c2318eb664cc284c330e7f357783
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8659940630440235028
+    second: spritesheetTeclado_0
+  - first:
+      213: 1712378648993482965
+    second: spritesheetTeclado_1
+  - first:
+      213: 4551469292142259822
+    second: spritesheetTeclado_2
+  - first:
+      213: -7872648896588757496
+    second: spritesheetTeclado_3
+  - first:
+      213: -8584312005721345284
+    second: spritesheetTeclado_4
+  - first:
+      213: 4466898321503696277
+    second: spritesheetTeclado_5
+  - first:
+      213: -5641526845718088531
+    second: spritesheetTeclado_6
+  - first:
+      213: 1473081921264696631
+    second: spritesheetTeclado_7
+  - first:
+      213: -5676436581004973939
+    second: spritesheetTeclado_8
+  - first:
+      213: -6425552917366495335
+    second: spritesheetTeclado_9
+  - first:
+      213: 8946358632772351791
+    second: spritesheetTeclado_10
+  - first:
+      213: -947007491020686827
+    second: spritesheetTeclado_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spritesheetTeclado_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 24
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 410dc5dfe1a4e2870800000000000000
+      internalID: 8659940630440235028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetTeclado_1
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 24
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d848360f4793c710800000000000000
+      internalID: 1712378648993482965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetTeclado_2
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 6
+        width: 26
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6eec3cd4311a2f30800000000000000
+      internalID: 4551469292142259822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetTeclado_3
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 24
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 806c4752a8bbeb290800000000000000
+      internalID: -7872648896588757496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetTeclado_4
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 6
+        width: 53
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf2bbd166b56ed880800000000000000
+      internalID: -8584312005721345284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetTeclado_5
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 24
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59534055b5c9dfd30800000000000000
+      internalID: 4466898321503696277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetTeclado_6
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 24
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da4b422593545b1b0800000000000000
+      internalID: -5641526845718088531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetTeclado_7
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 24
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73d3802e330717410800000000000000
+      internalID: 1473081921264696631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetTeclado_8
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 24
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d886a2f210f3931b0800000000000000
+      internalID: -5676436581004973939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetTeclado_9
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 24
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99725ea6aa9d3d6a0800000000000000
+      internalID: -6425552917366495335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetTeclado_10
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 24
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2735a3d6c9d72c70800000000000000
+      internalID: 8946358632772351791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetTeclado_11
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51af31254bd8bd2f0800000000000000
+      internalID: -947007491020686827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      spritesheetTeclado_0: 8659940630440235028
+      spritesheetTeclado_1: 1712378648993482965
+      spritesheetTeclado_10: 8946358632772351791
+      spritesheetTeclado_11: -947007491020686827
+      spritesheetTeclado_2: 4551469292142259822
+      spritesheetTeclado_3: -7872648896588757496
+      spritesheetTeclado_4: -8584312005721345284
+      spritesheetTeclado_5: 4466898321503696277
+      spritesheetTeclado_6: -5641526845718088531
+      spritesheetTeclado_7: 1473081921264696631
+      spritesheetTeclado_8: -5676436581004973939
+      spritesheetTeclado_9: -6425552917366495335
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
