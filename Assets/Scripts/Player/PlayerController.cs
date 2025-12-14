@@ -500,6 +500,7 @@ public partial class @PlayerController: IInputActionCollection2, IDisposable
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         // Tower
         m_Tower = asset.FindActionMap("Tower", throwIfNotFound: true);
+        m_Tower_T1 = m_Tower.FindAction("T1", throwIfNotFound: true);
         m_Tower_T2 = m_Tower.FindAction("T2", throwIfNotFound: true);
         m_Tower_T3 = m_Tower.FindAction("T3", throwIfNotFound: true);
         m_Tower_Cancel = m_Tower.FindAction("Cancel", throwIfNotFound: true);
@@ -508,6 +509,8 @@ public partial class @PlayerController: IInputActionCollection2, IDisposable
         m_Remove_Tower = m_Remove.FindAction("Tower", throwIfNotFound: true);
         m_Remove_Cancel = m_Remove.FindAction("Cancel", throwIfNotFound: true);
     }
+
+    ~@PlayerController()
     {
         UnityEngine.Debug.Assert(!m_Player.enabled, "This will cause a leak and performance issues, PlayerController.Player.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m_Tower.enabled, "This will cause a leak and performance issues, PlayerController.Tower.Disable() has not been called.");
