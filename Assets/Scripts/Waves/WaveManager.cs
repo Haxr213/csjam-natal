@@ -33,7 +33,7 @@ public class WaveManager : MonoBehaviour
             if (waves[currentWave].counterToNextWave <= 0)
             {
                 ChangeWave();
-                Debug.Log("Set Next Wave");
+                //Debug.Log("Set Next Wave");
             }
         }
     }
@@ -73,7 +73,7 @@ public class WaveManager : MonoBehaviour
         {
             yield return StartCoroutine(WaitForEnemiesToBeDestroyed(currentWaveEnemies));
 
-            Debug.Log("Nível Terminado!");
+            //Debug.Log("Nível Terminado!");
             wavesFinish = true;
         }
         else

@@ -287,6 +287,138 @@ public partial class @PlayerController: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Tower"",
+            ""id"": ""c9ae0bbf-70c4-4f9c-ae39-575b5054057d"",
+            ""actions"": [
+                {
+                    ""name"": ""T1"",
+                    ""type"": ""Button"",
+                    ""id"": ""30de2b1a-e669-43f2-ad51-15e2e085fb41"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""T2"",
+                    ""type"": ""Button"",
+                    ""id"": ""b3007054-6024-434c-a6ed-8b6efe0d1549"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""T3"",
+                    ""type"": ""Button"",
+                    ""id"": ""0afdd4b8-7e6d-4fca-9216-9698b2b734f0"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Cancel"",
+                    ""type"": ""Button"",
+                    ""id"": ""621e1618-b8bd-486e-9bf1-1e6a128e9efd"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""fea69ac0-0d90-4837-9be4-23e5a3f806b2"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""T1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""adcbca8d-588f-4e1b-b1a1-bfc74d55cd6f"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""T1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""aaef6c36-5f17-4fe3-b06a-656bea170ffd"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""T2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c1316bbf-6163-4994-9bf0-c2ac03fda039"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""T2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e376f72b-c567-4b9c-9998-456f06cf6f49"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""T3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""40534687-9d5d-4013-9e29-0f3f13b678b3"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""T3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c36f51ef-efc1-44ba-ab3c-1f80f0c50b42"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Cancel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""dbe0ef78-e36c-4eef-aba6-e567afe41c6d"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Cancel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -296,11 +428,18 @@ public partial class @PlayerController: IInputActionCollection2, IDisposable
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Action = m_Player.FindAction("Action", throwIfNotFound: true);
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
+        // Tower
+        m_Tower = asset.FindActionMap("Tower", throwIfNotFound: true);
+        m_Tower_T1 = m_Tower.FindAction("T1", throwIfNotFound: true);
+        m_Tower_T2 = m_Tower.FindAction("T2", throwIfNotFound: true);
+        m_Tower_T3 = m_Tower.FindAction("T3", throwIfNotFound: true);
+        m_Tower_Cancel = m_Tower.FindAction("Cancel", throwIfNotFound: true);
     }
 
     ~@PlayerController()
     {
         UnityEngine.Debug.Assert(!m_Player.enabled, "This will cause a leak and performance issues, PlayerController.Player.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_Tower.enabled, "This will cause a leak and performance issues, PlayerController.Tower.Disable() has not been called.");
     }
 
     /// <summary>
@@ -490,6 +629,135 @@ public partial class @PlayerController: IInputActionCollection2, IDisposable
     /// Provides a new <see cref="PlayerActions" /> instance referencing this action map.
     /// </summary>
     public PlayerActions @Player => new PlayerActions(this);
+
+    // Tower
+    private readonly InputActionMap m_Tower;
+    private List<ITowerActions> m_TowerActionsCallbackInterfaces = new List<ITowerActions>();
+    private readonly InputAction m_Tower_T1;
+    private readonly InputAction m_Tower_T2;
+    private readonly InputAction m_Tower_T3;
+    private readonly InputAction m_Tower_Cancel;
+    /// <summary>
+    /// Provides access to input actions defined in input action map "Tower".
+    /// </summary>
+    public struct TowerActions
+    {
+        private @PlayerController m_Wrapper;
+
+        /// <summary>
+        /// Construct a new instance of the input action map wrapper class.
+        /// </summary>
+        public TowerActions(@PlayerController wrapper) { m_Wrapper = wrapper; }
+        /// <summary>
+        /// Provides access to the underlying input action "Tower/T1".
+        /// </summary>
+        public InputAction @T1 => m_Wrapper.m_Tower_T1;
+        /// <summary>
+        /// Provides access to the underlying input action "Tower/T2".
+        /// </summary>
+        public InputAction @T2 => m_Wrapper.m_Tower_T2;
+        /// <summary>
+        /// Provides access to the underlying input action "Tower/T3".
+        /// </summary>
+        public InputAction @T3 => m_Wrapper.m_Tower_T3;
+        /// <summary>
+        /// Provides access to the underlying input action "Tower/Cancel".
+        /// </summary>
+        public InputAction @Cancel => m_Wrapper.m_Tower_Cancel;
+        /// <summary>
+        /// Provides access to the underlying input action map instance.
+        /// </summary>
+        public InputActionMap Get() { return m_Wrapper.m_Tower; }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
+        public void Enable() { Get().Enable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
+        public void Disable() { Get().Disable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
+        public bool enabled => Get().enabled;
+        /// <summary>
+        /// Implicitly converts an <see ref="TowerActions" /> to an <see ref="InputActionMap" /> instance.
+        /// </summary>
+        public static implicit operator InputActionMap(TowerActions set) { return set.Get(); }
+        /// <summary>
+        /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <param name="instance">Callback instance.</param>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
+        /// </remarks>
+        /// <seealso cref="TowerActions" />
+        public void AddCallbacks(ITowerActions instance)
+        {
+            if (instance == null || m_Wrapper.m_TowerActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_TowerActionsCallbackInterfaces.Add(instance);
+            @T1.started += instance.OnT1;
+            @T1.performed += instance.OnT1;
+            @T1.canceled += instance.OnT1;
+            @T2.started += instance.OnT2;
+            @T2.performed += instance.OnT2;
+            @T2.canceled += instance.OnT2;
+            @T3.started += instance.OnT3;
+            @T3.performed += instance.OnT3;
+            @T3.canceled += instance.OnT3;
+            @Cancel.started += instance.OnCancel;
+            @Cancel.performed += instance.OnCancel;
+            @Cancel.canceled += instance.OnCancel;
+        }
+
+        /// <summary>
+        /// Removes <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <remarks>
+        /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
+        /// </remarks>
+        /// <seealso cref="TowerActions" />
+        private void UnregisterCallbacks(ITowerActions instance)
+        {
+            @T1.started -= instance.OnT1;
+            @T1.performed -= instance.OnT1;
+            @T1.canceled -= instance.OnT1;
+            @T2.started -= instance.OnT2;
+            @T2.performed -= instance.OnT2;
+            @T2.canceled -= instance.OnT2;
+            @T3.started -= instance.OnT3;
+            @T3.performed -= instance.OnT3;
+            @T3.canceled -= instance.OnT3;
+            @Cancel.started -= instance.OnCancel;
+            @Cancel.performed -= instance.OnCancel;
+            @Cancel.canceled -= instance.OnCancel;
+        }
+
+        /// <summary>
+        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="TowerActions.UnregisterCallbacks(ITowerActions)" />.
+        /// </summary>
+        /// <seealso cref="TowerActions.UnregisterCallbacks(ITowerActions)" />
+        public void RemoveCallbacks(ITowerActions instance)
+        {
+            if (m_Wrapper.m_TowerActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        /// <summary>
+        /// Replaces all existing callback instances and previously registered input action callbacks associated with them with callbacks provided via <param cref="instance" />.
+        /// </summary>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
+        /// </remarks>
+        /// <seealso cref="TowerActions.AddCallbacks(ITowerActions)" />
+        /// <seealso cref="TowerActions.RemoveCallbacks(ITowerActions)" />
+        /// <seealso cref="TowerActions.UnregisterCallbacks(ITowerActions)" />
+        public void SetCallbacks(ITowerActions instance)
+        {
+            foreach (var item in m_Wrapper.m_TowerActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_TowerActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    /// <summary>
+    /// Provides a new <see cref="TowerActions" /> instance referencing this action map.
+    /// </summary>
+    public TowerActions @Tower => new TowerActions(this);
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Player" which allows adding and removing callbacks.
     /// </summary>
@@ -518,5 +786,41 @@ public partial class @PlayerController: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnLook(InputAction.CallbackContext context);
+    }
+    /// <summary>
+    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Tower" which allows adding and removing callbacks.
+    /// </summary>
+    /// <seealso cref="TowerActions.AddCallbacks(ITowerActions)" />
+    /// <seealso cref="TowerActions.RemoveCallbacks(ITowerActions)" />
+    public interface ITowerActions
+    {
+        /// <summary>
+        /// Method invoked when associated input action "T1" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnT1(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "T2" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnT2(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "T3" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnT3(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Cancel" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnCancel(InputAction.CallbackContext context);
     }
 }

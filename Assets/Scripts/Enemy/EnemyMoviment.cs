@@ -28,7 +28,7 @@ public class EnemyMoviment : MonoBehaviour
             pathIndex++;
             if (pathIndex == levelManager.path.Length)
             {
-                Debug.Log("Enemy reached the end of the path.");
+                //Debug.Log("Enemy reached the end of the path.");
                 Destroy(gameObject);
                 return;
             }

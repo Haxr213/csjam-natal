@@ -41,7 +41,7 @@ public class TowerRequestManager : MonoBehaviour
         else
         {
             isTowerPriced = false;
-            Debug.Log("Not money for tower : " + towerName);
+            //Debug.Log("Not money for tower : " + towerName);
             return;
         }
     }

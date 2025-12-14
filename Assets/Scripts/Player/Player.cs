@@ -24,6 +24,12 @@ public class Player : MonoBehaviour
     private readonly string nameTileUnderPlayer = "TileUnderPlayer";
     private Vector2 velocityRef;
 
+    [SerializeField] private PlayerInput playerInput;
+
+    private void Awake()
+    {
+        //playerInput = this.GetComponent<PlayerInput>();
+    }
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -88,7 +94,18 @@ public class Player : MonoBehaviour
     {
         if (context.performed)
         {
-            SpawnTurret();
+            Debug.Log("Action Input Performed - Switching to Tower Input");
+            playerInput.SwitchCurrentActionMap("Tower");
+            //SpawnTurret();
+        }
+    }
+
+    public void ReadCancelInput(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Debug.Log("Cancel Input Performed - Switching to Player Input");
+            playerInput.SwitchCurrentActionMap("Player");
         }
     }
 
