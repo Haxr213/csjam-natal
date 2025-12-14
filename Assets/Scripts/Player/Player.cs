@@ -24,11 +24,14 @@ public class Player : MonoBehaviour
     private readonly string nameTileUnderPlayer = "TileUnderPlayer";
     private Vector2 velocityRef;
 
+    private PlayerManager playerManager;
+
     [SerializeField] private PlayerInput playerInput;
 
     private void Awake()
     {
         //playerInput = this.GetComponent<PlayerInput>();
+        playerManager = this.GetComponent<PlayerManager>();
     }
     private void Start()
     {
@@ -92,11 +95,23 @@ public class Player : MonoBehaviour
 
     public void ReadActionInput(InputAction.CallbackContext context)
     {
+        if (!highlight.gameObject.activeSelf) return;
+        if (currentSlot == null) return;
         if (context.performed)
         {
-            Debug.Log("Action Input Performed - Switching to Tower Input");
+            if (currentSlot.isOccupied)
+            {
+                Debug.Log("Slot já ocupado.");
+                playerInput.SwitchCurrentActionMap("Remove");
+                playerManager.SetActiveRemoveTurretUI();
+                playerManager.SetActiveButtonUI();
+                playerManager.setInactiveTowersUI();
+                return;
+            }
             playerInput.SwitchCurrentActionMap("Tower");
-            //SpawnTurret();
+            playerManager.SetActiveTowersUI();
+            playerManager.SetActiveButtonUI();
+            playerManager.SetInactiveRemoveTurretUI();
         }
     }
 
@@ -104,12 +119,91 @@ public class Player : MonoBehaviour
     {
         if (context.performed)
         {
-            Debug.Log("Cancel Input Performed - Switching to Player Input");
             playerInput.SwitchCurrentActionMap("Player");
+            playerManager.setInactiveTowersUI();
+            playerManager.SetInactiveRemoveTurretUI();
+            playerManager.SetInactiveButtonUI();
         }
     }
 
-    private void SpawnTurret()
+    public void ReadRemoveTurretInput(InputAction.CallbackContext context)
+    {
+        if (!highlight.gameObject.activeSelf) return;
+        if (currentSlot == null) return;
+
+        if (context.performed)
+        {
+            if (!currentSlot.isOccupied)
+            {
+                Debug.Log("Slot não ocupado.");
+                return;
+            }
+
+            Tower tower = currentSlot.GetComponentInChildren<Tower>();
+            if (tower != null)
+            {
+                //towerRequestManager.RequestTowerSell(tower.towerType);
+                Destroy(tower.gameObject);
+                currentSlot.Free();
+            }
+            playerInput.SwitchCurrentActionMap("Player");
+            playerManager.setInactiveTowersUI();
+            playerManager.SetInactiveRemoveTurretUI();
+            playerManager.SetInactiveButtonUI();
+        }
+    }
+
+    public void ReadCancelRemoveInput(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            playerInput.SwitchCurrentActionMap("Player");
+            playerManager.setInactiveTowersUI();
+            playerManager.SetInactiveRemoveTurretUI();
+            playerManager.SetInactiveButtonUI();
+        }
+    }
+
+    public void ReadSpawnTurretPenguinInput(InputAction.CallbackContext context)
+    {
+        string turretType = "Penguin";
+        if (context.performed)
+        {
+            SpawnTurret(turretType);
+            playerInput.SwitchCurrentActionMap("Player");
+            playerManager.setInactiveTowersUI();
+            playerManager.SetInactiveRemoveTurretUI();
+            playerManager.SetInactiveButtonUI();
+        }
+    }
+
+    public void ReadSpawnTurretEggnog(InputAction.CallbackContext context)
+    {
+        string turretType = "Eggnog";
+        if (context.performed)
+        {
+            SpawnTurret(turretType);
+            playerInput.SwitchCurrentActionMap("Player");
+            playerManager.setInactiveTowersUI();
+            playerManager.SetInactiveRemoveTurretUI();
+            playerManager.SetInactiveButtonUI();
+        }
+    }
+
+    public void ReadSpawnTurretSquirrel(InputAction.CallbackContext context)
+    {
+        string turretType = "Squirrel";
+        if (context.performed)
+        {
+            SpawnTurret(turretType);
+            playerInput.SwitchCurrentActionMap("Player");
+            playerManager.setInactiveTowersUI();
+            playerManager.SetInactiveRemoveTurretUI();
+            playerManager.SetInactiveButtonUI();
+        }
+    }
+
+    private void SpawnTurret(string turretType = "Penguin")
     {
         if (!highlight.gameObject.activeSelf) return;
         if (currentSlot == null) return;
@@ -120,11 +214,25 @@ public class Player : MonoBehaviour
             return;
         }
 
-        towerRequestManager.RequestTowerBuy("Penguin");
+        towerRequestManager.RequestTowerBuy(turretType);
 
         if (!towerRequestManager.isTowerPriced) return;
 
-        GameObject turret = Instantiate(turrets[0], highlight.position, Quaternion.identity);
+        int towerType = 0;
+        switch (turretType)
+        {
+            case "Penguin":
+                towerType = 0;
+                break;
+            case "Eggnog":
+                towerType = 1;
+                break;
+            case "Squirrel":
+                towerType = 2;
+                break;
+        }
+
+        GameObject turret = Instantiate(turrets[towerType], highlight.position, Quaternion.identity, currentSlot.transform);
         currentSlot.Occupy();
         towerRequestManager.isTowerPriced = false;
     }

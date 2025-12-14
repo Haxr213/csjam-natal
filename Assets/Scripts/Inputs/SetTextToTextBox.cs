@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 public class SetTextToTextBox : MonoBehaviour
 {
     [TextArea(2, 3)]
-    [SerializeField] private string message = "Press {Player/Action} to interact which is also {Player/Action}.";
+    [SerializeField] public string message = "Press {Player/Action} to interact which is also {Player/Action}.";
 
     [Header("Setup for sprites")]
     [SerializeField] private ListOfTmpSpriteAssets listOfTmpSpriteAssets;
@@ -33,7 +33,7 @@ public class SetTextToTextBox : MonoBehaviour
     }
 
     [ContextMenu("Set Text")]
-    private void SetText()
+    public void SetText()
     {
         if ((int)deviceType > listOfTmpSpriteAssets.SpriteAssets.Count - 1)
         {
