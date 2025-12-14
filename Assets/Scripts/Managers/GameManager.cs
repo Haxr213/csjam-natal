@@ -6,9 +6,16 @@ public class GameManager : MonoBehaviour
     [Header("Managers")]
     [SerializeField] private WaveManagerGifts waveManagerGifts;
     [SerializeField] private List<WaveManager> waveManagers;
+    [SerializeField] private DialogSystem dialogSystem;
+
+    private void Awake()
+    {
+        //dialogSystem = this.GetComponent<DialogSystem>();
+    }
     private void Start()
     {
         SetWaveManagerGiftsActive(false);
+        dialogSystem.Next();
         foreach (var waveManager in waveManagers)
         {
             SetWaveManagerActive(waveManagers.IndexOf(waveManager), false);
