@@ -4315,9 +4315,9 @@ RectTransform:
   - {fileID: 3524832381829156172}
   m_Father: {fileID: 3438509421342377415}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -150}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 950}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7716906422931777261
@@ -4892,6 +4892,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TowerRequestManager
   towers:
   - {fileID: 6607462414681236965, guid: 595d9466394e97b4f8d979b21937a8cd, type: 3}
+  - {fileID: 7535522514512627567, guid: 50dccf08ee6844741af4d4390b3848f2, type: 3}
   - {fileID: 6607462414681236965, guid: 4b4d1f832e7f5c3449264a7aafc63098, type: 3}
   isTowerPriced: 0
 --- !u!1 &8350196065341192170
