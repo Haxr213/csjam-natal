@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class WaveManager : MonoBehaviour
@@ -7,6 +8,7 @@ public class WaveManager : MonoBehaviour
     public List<WaveObject> waves = new List<WaveObject>();
     public bool isWaitingForNextWave;
     public bool wavesFinish;
+    public bool isWaveActive; // Controla se a onda de presentes está ativa
     public int currentWave;
     public Transform initPosition;
     private Enemy enemy;
@@ -25,7 +27,6 @@ public class WaveManager : MonoBehaviour
 
     private void CheckCounterForNextWave()
     {
-        
         if (isWaitingForNextWave && !wavesFinish)
         {
             waves[currentWave].counterToNextWave -= 1 * Time.deltaTime;
@@ -56,6 +57,8 @@ public class WaveManager : MonoBehaviour
         waves[currentWave].counterToNextWave = waves[currentWave].timeForNextWave;
 
         List<Enemy> currentWaveEnemies = new List<Enemy>();
+
+        // Gerar inimigos
         for (int i = 0; i < waves[currentWave].enemys.Count; i++)
         {
             enemy = Instantiate(waves[currentWave].enemys[i], initPosition.position, initPosition.rotation);
@@ -70,7 +73,7 @@ public class WaveManager : MonoBehaviour
         {
             yield return StartCoroutine(WaitForEnemiesToBeDestroyed(currentWaveEnemies));
 
-            Debug.Log("N�vel Terminado!");
+            Debug.Log("Nível Terminado!");
             wavesFinish = true;
         }
         else
