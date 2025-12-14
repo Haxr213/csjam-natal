@@ -154,8 +154,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -1265.2727}
-  m_SizeDelta: {x: 1920, y: 1486.2336}
+  m_AnchoredPosition: {x: 0, y: -1489}
+  m_SizeDelta: {x: 1920, y: 1988.7556}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &352782957
 MonoBehaviour:
@@ -179,7 +179,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "OBRIGADO POR JOGAR!!\n\nPRODUZIDO POR\nVAMPYL STUDIOS\n\nANDR\xC9 JUNIOR       
     \nLUCAS PACHECO\nMaur\xEDcio Horiuchi\nPEDRO HENRIQUE RODRIGUES\nVitor Oliveira
-    Kuribara\nYhann Daniel Gomes da Cruz\n\nEfeitos Sonoros\nZapSplat\n"
+    Kuribara\nYhann Daniel Gomes da Cruz\n\nM\xFAsica do menu e \nefeitos sonoros
+    por \nZapsplat e Jes Smith\n\nMusica do jogo por\n Cyberwave-Orchestra via Pixabay"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 54cc335e98ca92a459cc50b54a784c53, type: 2}
   m_sharedMaterial: {fileID: 7021736377300844565, guid: 54cc335e98ca92a459cc50b54a784c53, type: 2}
@@ -272,8 +273,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Creditos
   idCenaMenu: 0
-  velocidadeRolagem: 50
-  alturaMaxima: 259
+  velocidadeRolagem: 80
+  alturaMaxima: 476
   tempoEspera: 5
 --- !u!1 &636598819
 GameObject:
