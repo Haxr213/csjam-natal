@@ -49,7 +49,7 @@ public class WaveManagerGifts : MonoBehaviour
             if (gifts[currentWave].counterToNextWave <= 0)
             {
                 ChangeWave();
-                //Debug.Log("Set Next Wave");
+                Debug.Log("Set Next Wave");
             }
         }
     }
@@ -83,7 +83,7 @@ public class WaveManagerGifts : MonoBehaviour
         if (currentWave >= gifts.Count - 1)
         {
             wavesFinish = true;
-            //Debug.Log("Wave de presentes finalizada!");
+            Debug.Log("Wave de presentes finalizada!");
         }
         else
         {
@@ -114,7 +114,7 @@ public class WaveManagerGifts : MonoBehaviour
             {
                 Destroy(gift.gameObject);
                 activeGifts.RemoveAt(i);
-                //Debug.Log("Present removed!");
+                Debug.Log("Present removed!");
                 break;
             }
         }
