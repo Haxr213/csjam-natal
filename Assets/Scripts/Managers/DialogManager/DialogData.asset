@@ -18,7 +18,7 @@ MonoBehaviour:
   - name: 
     text: "Vou coletar recursos e te ajudar com o b\xE1sico."
   - name: 
-    text: 'Mova-se com '
+    text: 'Mova-se com {Player/Move} '
   - name: 
     text: Use  para abastecer, isso reduz presentes ruins
   - name: 
