@@ -154,7 +154,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -1489}
+  m_AnchoredPosition: {x: 0, y: -1493}
   m_SizeDelta: {x: 1920, y: 1988.7556}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &352782957
@@ -246,7 +246,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: -652.7435}
+  m_margin: {x: 0, y: 0, z: 0, w: -9.228638}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -272,9 +272,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d899ad786f5123c4488abe4e68ee0de8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Creditos
-  idCenaMenu: 0
+  idCenaMenu: 2
   velocidadeRolagem: 80
-  alturaMaxima: 476
+  alturaMaxima: 485
   tempoEspera: 5
 --- !u!1 &636598819
 GameObject:
